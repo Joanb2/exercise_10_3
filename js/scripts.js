@@ -12,6 +12,6 @@ $(document).ready(function(){
 		carouselList.css({marginLeft: 0});
 	}
 
-	//setInterval(changeSlide, 3000);
+	setInterval(changeSlide, 3000);
 
 });
