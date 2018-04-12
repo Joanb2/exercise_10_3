@@ -3,25 +3,39 @@
 	width: 600px;
 	height: 400px;
 	border: 10px solid #bbb;
-	overflow: hidden;
+	/*overflow: hidden;*/
+	position: relative;
 }
 
 #carousel ul {
 	width: 3000px;
 	height: 400px;
 	list-style-type: none;
+	position: relative;
 }
 
 #carousel ul li {
 	float: left;
 	width: 600px;
 	height: 400px;
+	position: relative;
 }
 
 
 #carousel ul li img {
 	width: 600px;
 	height: 400px;
+	position: relative;
+}
+
+#prev, #next {
+	/*position: absolute;*/
+	text-decoration: none;
+	color: #000;
+	font-size: 45px;
+	line-height: 50px;
+	text-align: center;
+	margin: 150px;
 }
 
 * {
