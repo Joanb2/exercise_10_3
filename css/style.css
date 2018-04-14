@@ -11,24 +11,21 @@
 	width: 3000px;
 	height: 400px;
 	list-style-type: none;
-	/*position: relative;*/
 }
 
 #carousel ul li {
 	float: left;
 	width: 600px;
 	height: 400px;
-	/*position: relative;*/
 }
 
 
 #carousel ul li img {
 	width: 600px;
 	height: 400px;
-	/*position: relative;*/
 }
 
-#prev, #next {
+#prev , #next {
 	position: absolute;
 	text-decoration: none;
 	color: #fff;
@@ -37,6 +34,7 @@
 	top: 190px;
 	left: 300px;
 	opacity: .7;
+	cursor: pointer;
 }
 
 #prev:hover, #next:hover {
