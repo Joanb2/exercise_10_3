@@ -12,28 +12,31 @@ $(document).ready(function(){
 		lastItem.after(firstItem);
 		carouselList.css({marginLeft: 0});
 	}
-	var myInterval = setInterval(changeSlide, 4000);
+	var myInterval = setInterval(changeSlide, 3000);
 
 	$('#next').on('click', function() {
 
 		clearInterval(myInterval);
-
 		changeSlide();
-		
+
 	});
 
 	$('#prev').on('click', function(){
 
 		clearInterval(myInterval);
+		var reverse = setInterval(reverseSlide, 3000);
+		setInterval(reverse);
 
 		function reverseSlide() {
-
-			moveFirstSlide();
-			carouselList.css({marginRight: 0});
+			carouselList.animate({marginLeft: 600}, 1000, previousSlide);
 		}
 
-		carouselList.animate({marginLeft: 600}, 1000, reverseSlide);
-
-	});
+		function previousSlide() {
+			var firstItem = carouselList.find('li:first');
+			var lastItem = carouselList.find('li:last');
+			lastItem.before(firstItem);
+			carouselList.css({marginLeft: 0});
+		}
+	});	
 
 });
