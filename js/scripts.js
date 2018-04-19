@@ -24,18 +24,18 @@ $(document).ready(function(){
 	$('#prev').on('click', function(){
 
 		clearInterval(myInterval);
-		var reverse = setInterval(reverseSlide, 3000);
-		setInterval(reverse);
+		myInterval = setInterval(reverseSlide, 3000);
 
 		function reverseSlide() {
-			carouselList.animate({marginLeft: 600}, 1000, previousSlide);
+			previousSlide();
+			carouselList.animate({marginLeft: 0}, 1000);
 		}
 
 		function previousSlide() {
 			var firstItem = carouselList.find('li:first');
 			var lastItem = carouselList.find('li:last');
-			lastItem.before(firstItem);
-			carouselList.css({marginLeft: 0});
+			firstItem.before(lastItem);
+            carouselList.css({marginLeft: -600});
 		}
 	});	
 
